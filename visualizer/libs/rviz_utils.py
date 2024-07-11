@@ -1,12 +1,18 @@
 import os
-import tf
 import math
-
-import rospy
+import rclpy
+from rclpy.node import Node
 from geometry_msgs.msg import Point
 from visualization_msgs.msg import Marker, MarkerArray
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
+
+def quaternion_from_euler(roll, pitch, yaw):
+    qx = math.sin(roll / 2) * math.cos(pitch / 2) * math.cos(yaw / 2) - math.cos(roll / 2) * math.sin(pitch / 2) * math.cos(yaw / 2)
+    qy = math.cos(roll / 2) * math.sin(pitch / 2) * math.cos(yaw / 2) + math.sin(roll / 2) * math.cos(pitch / 2) * math.cos(yaw / 2)
+    qz = math.cos(roll / 2) * math.cos(pitch / 2) * math.sin(yaw / 2) - math.sin(roll / 2) * math.sin(pitch / 2) * math.cos(yaw / 2)
+    qw = math.cos(roll / 2) * math.cos(pitch / 2) * math.cos(yaw / 2) + math.sin(roll / 2) * math.sin(pitch / 2) * math.sin(yaw / 2)
+    return [qx, qy, qz, qw]
 
 def LocalPathViz(waypoints):
     color =  [241, 76, 152, 1]
@@ -37,7 +43,7 @@ def Line(ns, id_, scale, color, len):
     marker.header.frame_id = 'world'
     marker.ns = ns
     marker.id = id_
-    marker.lifetime = rospy.Duration(0)
+    marker.lifetime = rclpy.duration.Duration(seconds=0.0)
     marker.scale.x = scale
     marker.color.r = color[0]
     marker.color.g = color[1]
@@ -94,7 +100,7 @@ def Points(ns, id_, scale, color):
     marker.header.frame_id = 'world'
     marker.ns = ns
     marker.id = id_
-    marker.lifetime = rospy.Duration(0)
+    marker.lifetime = rclpy.duration.Duration(seconds=0.0)
     marker.scale.x = scale
     marker.scale.y = scale
     marker.color.r = color[0]
@@ -108,7 +114,7 @@ def CarInfoViz(frame_id, name_space, info, position):
     marker.header.frame_id = frame_id
     marker.ns = name_space
     marker.type = Marker.TEXT_VIEW_FACING
-    marker.lifetime = rospy.Duration(0)
+    marker.lifetime = rclpy.duration.Duration(seconds=0.0)
     marker.scale.z = 2.0
     marker.color.r = 1
     marker.color.g = 1
@@ -120,7 +126,6 @@ def CarInfoViz(frame_id, name_space, info, position):
     marker.text = info
     return marker
 
-
 def CarViz(frame_id, name_space, position, color):
     marker = Marker()
     marker.header.frame_id = frame_id
@@ -129,7 +134,7 @@ def CarViz(frame_id, name_space, position, color):
     marker.type = Marker.MESH_RESOURCE
     marker.mesh_resource = 'file://{}/car.dae'.format(dir_path)
     marker.action = Marker.ADD
-    marker.lifetime = rospy.Duration(0)
+    marker.lifetime = rclpy.duration.Duration(seconds=0.0)
     marker.scale.x = 2.0
     marker.scale.y = 2.0
     marker.scale.z = 2.0
@@ -140,7 +145,7 @@ def CarViz(frame_id, name_space, position, color):
     marker.pose.position.x = position[0]
     marker.pose.position.y = position[1]
     marker.pose.position.z = position[2]
-    quaternion = tf.transformations.quaternion_from_euler(0, 0, math.radians(90))
+    quaternion = quaternion_from_euler(0, 0, math.radians(90))
     marker.pose.orientation.x = quaternion[0]
     marker.pose.orientation.y = quaternion[1]
     marker.pose.orientation.z = quaternion[2]
@@ -162,9 +167,8 @@ def ObjectViz(_id, position, heading, color):
     marker.ns = 'object'
     marker.id = _id
     marker.type = Marker.SPHERE
-    #marker.mesh_resource = 'file://{}/car.dae'.format(dir_path)
     marker.action = Marker.ADD
-    marker.lifetime = rospy.Duration(0)
+    marker.lifetime = rclpy.duration.Duration(seconds=0.0)
     marker.scale.x = 1.5
     marker.scale.y = 1.5
     marker.scale.z = 1.5
@@ -175,7 +179,7 @@ def ObjectViz(_id, position, heading, color):
     marker.pose.position.x = position[0]
     marker.pose.position.y = position[1]
     marker.pose.position.z = 0.5
-    quaternion = tf.transformations.quaternion_from_euler(0, 0, math.radians(heading+90))
+    quaternion = quaternion_from_euler(0, 0, math.radians(heading+90))
     marker.pose.orientation.x = quaternion[0]
     marker.pose.orientation.y = quaternion[1]
     marker.pose.orientation.z = quaternion[2]
