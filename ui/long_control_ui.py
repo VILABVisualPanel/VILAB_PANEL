@@ -6,9 +6,10 @@ from libs.VelocityGraph import VelocityGraph
 
 from functools import partial
 
-import rospy
+import rclpy
+from rclpy.node import Node
 from std_msgs.msg import Float32, Int8
-from drive_msgs.msg import *
+# from drive_msgs.msg import Actuator, VehicleState
 
 class MainWindow(QWidget):
     def __init__(self):
@@ -17,39 +18,41 @@ class MainWindow(QWidget):
         self.current_velocity = 0.0
         self.target_velocity = 0.0
 
-        self.ego_actuator = [0,0,0]
-        self.target_actuator = [0,0,0]
+        self.ego_actuator = [0, 0, 0]
+        self.target_actuator = [0, 0, 0]
         
         self.time = 0
         self.velocity_graph = VelocityGraph(self)
 
-        rospy.init_node("long_control_ui")
+        rclpy.init(args=None)
+        self.node = rclpy.create_node('long_control_ui')
         
         self.initUI()
-
-        rospy.Subscriber('/EgoActuator', Actuator, self.ego_actuator_cb)
-        rospy.Subscriber('/VehicleState', VehicleState, self.vehicle_state_cb)
-        rospy.Subscriber('/control/target_actuator', Actuator, self.target_actuator_cb)
-        self.pub_user_target_velocity = rospy.Publisher('/test/target_velocity', Float32, queue_size=1)
-        self.pub_system_mode = rospy.Publisher('/state_machine/system_state',Int8, queue_size=1)
+        
+        ######################################## Topic Message 수정 #########################################
+        # self.ego_actuator_sub = self.node.create_subscription(Actuator, '/EgoActuator', self.ego_actuator_cb, 10)
+        # self.vehicle_state_sub = self.node.create_subscription(VehicleState, '/VehicleState', self.vehicle_state_cb, 10)
+        # self.target_actuator_sub = self.node.create_subscription(Actuator, '/control/target_actuator', self.target_actuator_cb, 10)
+        ####################################################################################################
+        
+        self.pub_user_target_velocity = self.node.create_publisher(Float32, '/test/target_velocity', 10)
+        self.pub_system_mode = self.node.create_publisher(Int8, '/state_machine/system_state', 10)
 
         self.initTimer()
-    
 
     def ego_actuator_cb(self, msg):
-        self.current_steer_label.setText(f'Current Steer: {round(msg.steer.data, 2)}')
-        self.current_accel_label.setText(f'Current Accel: {round(msg.accel.data,2)}') 
-        self.current_brake_label.setText(f'Current Brake: {round(msg.brake.data,2)}')
+        self.current_steer_label.setText(f'Current Steer: {round(msg.steer, 2)}')
+        self.current_accel_label.setText(f'Current Accel: {round(msg.accel, 2)}') 
+        self.current_brake_label.setText(f'Current Brake: {round(msg.brake, 2)}')
     
     def target_actuator_cb(self, msg):
-        self.target_steer_label.setText(f'Target Steer: {round(msg.steer.data,2)}')
-        self.target_accel_label.setText(f'Target Accel: {round(msg.accel.data,2)}') 
-        self.target_brake_label.setText(f'Target Brake: {round(msg.brake.data,2)}')
+        self.target_steer_label.setText(f'Target Steer: {round(msg.steer, 2)}')
+        self.target_accel_label.setText(f'Target Accel: {round(msg.accel, 2)}') 
+        self.target_brake_label.setText(f'Target Brake: {round(msg.brake, 2)}')
     
     def vehicle_state_cb(self, msg):
-        self.current_velocity = round(msg.velocity.data*3.6,2)
+        self.current_velocity = round(msg.velocity * 3.6, 2)
         self.current_velocity_label.setText(f'Current Velocity: {self.current_velocity}')
-    
     
     def initUI(self):
         # 전체 수직 레이아웃
@@ -98,7 +101,6 @@ class MainWindow(QWidget):
         target_values_layout.addWidget(self.target_brake_label)
         main_layout.addLayout(target_values_layout)
 
-
         main_layout.addWidget(self.velocity_graph)
 
         # 메인 윈도우 설정
@@ -107,7 +109,7 @@ class MainWindow(QWidget):
         self.setGeometry(300, 300, 600, 400)
 
     def mode_publish(self, mode):
-        self.pub_system_mode.publish(Int8(mode))
+        self.pub_system_mode.publish(Int8(data=mode))
    
     def initTimer(self):
         self.timer = QTimer(self)
@@ -119,15 +121,29 @@ class MainWindow(QWidget):
         target_velocity = self.target_velocity_input.text()
         try:
             self.target_velocity = float(target_velocity)
-            self.pub_user_target_velocity.publish(self.target_velocity/3.6)
+            self.pub_user_target_velocity.publish(Float32(data=self.target_velocity/3.6))
         except ValueError:
             pass
     
     def update_graph(self):
         self.velocity_graph.set_speed(self.target_velocity, self.current_velocity)
 
-if __name__ == '__main__':
+def main():
+    rclpy.init(args=sys.argv)
     app = QApplication(sys.argv)
     ex = MainWindow()
     ex.show()
-    sys.exit(app.exec_())
+    
+    # Spin in a separate thread
+    executor = rclpy.executors.MultiThreadedExecutor()
+    executor.add_node(ex.node)
+
+    try:
+        app.exec_()
+    finally:
+        executor.shutdown()
+        ex.node.destroy_node()
+        rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
