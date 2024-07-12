@@ -10,6 +10,9 @@ app = None
 from libs.widgets import *
 from ros_handler import ROSHandler
 
+import rclpy
+from rclpy.node import Node
+
 form_class = uic.loadUiType("./forms/mainwindow.ui")[0]
 
 STEER_RATIO = 12.9
@@ -120,7 +123,8 @@ class MyApp(QMainWindow, form_class):
 
        
 
-def main():
+def main(args=None):
+    rclpy.init(args=args)
     app = QApplication(sys.argv)
     ex = MyApp()
     ex.show()
