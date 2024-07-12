@@ -1,2 +1,0 @@
-std_msgs/Int8 user_mode
-std_msgs/Int8 user_signal
