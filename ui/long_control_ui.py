@@ -30,11 +30,11 @@ class MainWindow(QWidget):
         
         self.initUI()
         
-        ######################################## Topic Message 수정 #########################################
+        ##################################################### Topic Message 수정 #######################################################
         # self.ego_actuator_sub = self.node.create_subscription(Actuator, '/EgoActuator', self.ego_actuator_cb, 10)
         # self.vehicle_state_sub = self.node.create_subscription(VehicleState, '/VehicleState', self.vehicle_state_cb, 10)
         # self.target_actuator_sub = self.node.create_subscription(Actuator, '/control/target_actuator', self.target_actuator_cb, 10)
-        ####################################################################################################
+        ###############################################################################################################################
         
         self.pub_user_target_velocity = self.node.create_publisher(Float32, '/test/target_velocity', 10)
         self.pub_system_mode = self.node.create_publisher(Int8, '/state_machine/system_state', 10)

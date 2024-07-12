@@ -7,9 +7,8 @@ import datetime
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 
-
 class RvizWidget(rviz.VisualizationFrame):
-    def __init__(self, parent=None):
+    def __init__(self, parent=None): # RViz
         super(RvizWidget, self).__init__(parent)
         self.setContentsMargins(0, 0, 0, 0)
         self.setSplashPath('')
