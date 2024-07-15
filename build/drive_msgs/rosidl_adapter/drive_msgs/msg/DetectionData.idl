@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from drive_msgs/msg/DetectionData.msg
+// generated code does not contain a copyright notice
+
+#include "drive_msgs/msg/ObjectInfo.idl"
+#include "geometry_msgs/msg/Point.idl"
+
+module drive_msgs {
+  module msg {
+    struct DetectionData {
+      sequence<drive_msgs::msg::ObjectInfo> objects;
+
+      sequence<geometry_msgs::msg::Point> laneposition0;
+
+      sequence<geometry_msgs::msg::Point> laneposition1;
+
+      sequence<geometry_msgs::msg::Point> laneposition2;
+
+      sequence<geometry_msgs::msg::Point> laneposition3;
+    };
+  };
+};

@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from drive_msgs/msg/SystemStatus.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Int8.idl"
+#include "std_msgs/msg/String.idl"
+
+module drive_msgs {
+  module msg {
+    struct SystemStatus {
+      std_msgs::msg::String mapname;
+
+      sequence<float> basella;
+
+      std_msgs::msg::Int8 systemmode;
+
+      std_msgs::msg::Int8 systemsignal;
+
+      std_msgs::msg::Int8 systemstate;
+
+      std_msgs::msg::Int8 systemhealth;
+
+      std_msgs::msg::Int8 lapcount;
+    };
+  };
+};

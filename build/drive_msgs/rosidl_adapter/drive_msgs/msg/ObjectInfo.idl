@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from drive_msgs/msg/ObjectInfo.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "std_msgs/msg/Float32.idl"
+#include "std_msgs/msg/Int8.idl"
+
+module drive_msgs {
+  module msg {
+    struct ObjectInfo {
+      std_msgs::msg::Int8 type;
+
+      geometry_msgs::msg::Point position;
+
+      std_msgs::msg::Float32 heading;
+
+      std_msgs::msg::Float32 velocity;
+    };
+  };
+};

@@ -1,0 +1,17 @@
+{
+  "package_name": "drive_msgs",
+  "non_idl_tuples": [
+    "/home/hankyeolyu/vilab/VILAB_PANEL/src/drive_msgs:msg/Actuator.msg",
+    "/home/hankyeolyu/vilab/VILAB_PANEL/src/drive_msgs:msg/ObjectInfo.msg",
+    "/home/hankyeolyu/vilab/VILAB_PANEL/src/drive_msgs:msg/DetectionData.msg",
+    "/home/hankyeolyu/vilab/VILAB_PANEL/src/drive_msgs:msg/NavigationData.msg",
+    "/home/hankyeolyu/vilab/VILAB_PANEL/src/drive_msgs:msg/VehicleState.msg",
+    "/home/hankyeolyu/vilab/VILAB_PANEL/src/drive_msgs:msg/CANInput.msg",
+    "/home/hankyeolyu/vilab/VILAB_PANEL/src/drive_msgs:msg/LaneData.msg",
+    "/home/hankyeolyu/vilab/VILAB_PANEL/src/drive_msgs:msg/SensorData.msg",
+    "/home/hankyeolyu/vilab/VILAB_PANEL/src/drive_msgs:msg/CANOutput.msg",
+    "/home/hankyeolyu/vilab/VILAB_PANEL/src/drive_msgs:msg/LaneLet.msg",
+    "/home/hankyeolyu/vilab/VILAB_PANEL/src/drive_msgs:msg/UserInput.msg",
+    "/home/hankyeolyu/vilab/VILAB_PANEL/src/drive_msgs:msg/SystemStatus.msg"
+  ]
+}

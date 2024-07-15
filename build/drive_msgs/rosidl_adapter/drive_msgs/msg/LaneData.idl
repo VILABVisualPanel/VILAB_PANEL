@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from drive_msgs/msg/LaneData.msg
+// generated code does not contain a copyright notice
+
+#include "drive_msgs/msg/LaneLet.idl"
+
+module drive_msgs {
+  module msg {
+    struct LaneData {
+      drive_msgs::msg::LaneLet currentlane;
+
+      drive_msgs::msg::LaneLet neighborlane;
+    };
+  };
+};

@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from drive_msgs/msg/UserInput.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Int8.idl"
+
+module drive_msgs {
+  module msg {
+    struct UserInput {
+      std_msgs::msg::Int8 user_mode;
+
+      std_msgs::msg::Int8 user_signal;
+    };
+  };
+};

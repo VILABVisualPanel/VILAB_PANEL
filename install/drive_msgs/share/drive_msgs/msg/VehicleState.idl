@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from drive_msgs/msg/VehicleState.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "std_msgs/msg/Float32.idl"
+#include "std_msgs/msg/Header.idl"
+#include "std_msgs/msg/Int8.idl"
+#include "std_msgs/msg/String.idl"
+
+module drive_msgs {
+  module msg {
+    struct VehicleState {
+      std_msgs::msg::Header header;
+
+      std_msgs::msg::Int8 mode;
+
+      std_msgs::msg::String gear;
+
+      std_msgs::msg::Int8 signal;
+
+      std_msgs::msg::Float32 velocity;
+
+      std_msgs::msg::Float32 heading;
+
+      geometry_msgs::msg::Point position;
+    };
+  };
+};

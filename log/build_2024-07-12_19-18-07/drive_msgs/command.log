@@ -1,0 +1,4 @@
+Invoking command in '/home/hankyeolyu/vilab/VILAB_PANEL/build/drive_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hankyeolyu/vilab/VILAB_PANEL/build/drive_msgs -- -j6 -l6
+Invoked command in '/home/hankyeolyu/vilab/VILAB_PANEL/build/drive_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hankyeolyu/vilab/VILAB_PANEL/build/drive_msgs -- -j6 -l6
+Invoking command in '/home/hankyeolyu/vilab/VILAB_PANEL/build/drive_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hankyeolyu/vilab/VILAB_PANEL/build/drive_msgs
+Invoked command in '/home/hankyeolyu/vilab/VILAB_PANEL/build/drive_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hankyeolyu/vilab/VILAB_PANEL/build/drive_msgs

@@ -1,0 +1,147 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from drive_msgs/msg/CANOutput.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/String.idl"
+
+module drive_msgs {
+  module msg {
+    struct CANOutput {
+      @verbatim (language="comment", text=
+        "0: Disabled, 1: Enabled")
+      std_msgs::msg::String eps_en_status;
+
+      @verbatim (language="comment", text=
+        "Value [0, 2]")
+      std_msgs::msg::String eps_control_board_status;
+
+      @verbatim (language="comment", text=
+        "Value [0, 15]")
+      std_msgs::msg::String eps_control_status;
+
+      @verbatim (language="comment", text=
+        "0: No Error, 1: Error")
+      std_msgs::msg::String eps_user_can_err;
+
+      @verbatim (language="comment", text=
+        "0: No Error, 1: Error")
+      std_msgs::msg::String eps_err;
+
+      @verbatim (language="comment", text=
+        "0: No Error, 1: Error")
+      std_msgs::msg::String eps_veh_can_err;
+
+      @verbatim (language="comment", text=
+        "0: No Error, 1: Error")
+      std_msgs::msg::String eps_sas_err;
+
+      @verbatim (language="comment", text=
+        "0: Not Ignored, 1: Ignored")
+      std_msgs::msg::String override_ignore_status;
+
+      @verbatim (language="comment", text=
+        "0: No Override, 1: Override")
+      std_msgs::msg::String override_status;
+
+      @verbatim (language="comment", text=
+        "Steering angle, scaled 0.1 (deg)")
+      std_msgs::msg::String strang;
+
+      @verbatim (language="comment", text=
+        "Steering driver torque, scaled 0.01")
+      std_msgs::msg::String str_drv_tq;
+
+      @verbatim (language="comment", text=
+        "Steering output torque, scaled 0.1")
+      std_msgs::msg::String str_out_tq;
+
+      @verbatim (language="comment", text=
+        "Alive counter, value [0, 255]")
+      std_msgs::msg::String eps_alive_cnt;
+
+      @verbatim (language="comment", text=
+        "True: Enabled, False: Disabled")
+      std_msgs::msg::String acc_en_status;
+
+      @verbatim (language="comment", text=
+        "Value [0, 7]")
+      std_msgs::msg::String acc_control_board_status;
+
+      @verbatim (language="comment", text=
+        "Value [0, 15]")
+      std_msgs::msg::String acc_control_status;
+
+      @verbatim (language="comment", text=
+        "False: No Error, True: Error")
+      std_msgs::msg::String acc_user_can_err;
+
+      @verbatim (language="comment", text=
+        "False: No Error, True: Error")
+      std_msgs::msg::String acc_err;
+
+      @verbatim (language="comment", text=
+        "Vehicle speed (km/h)")
+      std_msgs::msg::String vs;
+
+      @verbatim (language="comment", text=
+        "Longitudinal acceleration, scaled 0.01 (m/s^2)")
+      std_msgs::msg::String long_accel1;
+
+      @verbatim (language="comment", text=
+        "True: Enabled, False: Disabled")
+      std_msgs::msg::String hazard_en;
+
+      @verbatim (language="comment", text=
+        "True: Enabled, False: Disabled")
+      std_msgs::msg::String turn_left_en;
+
+      @verbatim (language="comment", text=
+        "True: Enabled, False: Disabled")
+      std_msgs::msg::String turn_right_en;
+
+      @verbatim (language="comment", text=
+        "False: No Error, True: Error")
+      std_msgs::msg::String acc_veh_err;
+
+      @verbatim (language="comment", text=
+        "Gear selector display")
+      std_msgs::msg::String g_sel_disp;
+
+      @verbatim (language="comment", text=
+        "Alive counter, value [0, 255]")
+      std_msgs::msg::String acc_alive_cnt;
+
+      @verbatim (language="comment", text=
+        "Front right wheel speed, scaled 0.03125 (kph)")
+      std_msgs::msg::String wheel_spd_fr;
+
+      @verbatim (language="comment", text=
+        "Front left wheel speed, scaled 0.03125 (kph)")
+      std_msgs::msg::String wheel_spd_fl;
+
+      @verbatim (language="comment", text=
+        "Rear right wheel speed, scaled 0.03125 (kph)")
+      std_msgs::msg::String wheel_spd_rr;
+
+      @verbatim (language="comment", text=
+        "Rear left wheel speed, scaled 0.03125 (kph)")
+      std_msgs::msg::String wheel_spd_rl;
+
+      @verbatim (language="comment", text=
+        "Lateral acceleration, scaled 0.01 (m/s^2)")
+      std_msgs::msg::String lat_accel;
+
+      @verbatim (language="comment", text=
+        "Yaw rate, scaled 0.01 (deg/s)")
+      std_msgs::msg::String yaw_rate;
+
+      @verbatim (language="comment", text=
+        "Brake cylinder pressure, scaled 0.1")
+      std_msgs::msg::String brk_cylinder;
+
+      @verbatim (language="comment", text=
+        "Longitudinal acceleration, scaled 0.01 (m/s^2)")
+      std_msgs::msg::String long_accel2;
+    };
+  };
+};

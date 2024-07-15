@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from drive_msgs/msg/SensorData.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "sensor_msgs/msg/Image.idl"
+#include "std_msgs/msg/Float32.idl"
+
+module drive_msgs {
+  module msg {
+    struct SensorData {
+      sensor_msgs::msg::Image image;
+
+      geometry_msgs::msg::Point position;
+
+      std_msgs::msg::Float32 heading;
+    };
+  };
+};
