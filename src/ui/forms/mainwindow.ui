@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1161</width>
-    <height>892</height>
+    <height>919</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -58,7 +58,7 @@
 color: rgb(245,252,20);</string>
          </property>
          <property name="text">
-          <string>Lap: 0</string>
+          <string/>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>

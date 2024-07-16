@@ -7,20 +7,7 @@ from matplotlib.figure import Figure
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 import matplotlib.pyplot as plt
 
-# class RvizWidget(bindings.VisualizationFrame):
-#     def __init__(self, parent=None): # RViz
-#         super(RvizWidget, self).__init__(parent)
-#         self.setContentsMargins(0, 0, 0, 0)
-#         self.setSplashPath('')
-#         self.initialize()
-#         reader = bindings.YamlConfigReader()
-#         config = bindings.Config()
-#         reader.readFile(config, "./rviz/control_ui.rviz")
-#         self.load(config)
-#         self.setMenuBar(None)
-#         self.setStatusBar(None)
-
-#################### Example #####################
+################## Real-Time Matplot ####################
 class MatplotlibWidget(QWidget):
     def __init__(self, parent=None):
         super(MatplotlibWidget, self).__init__(parent)
@@ -38,7 +25,7 @@ class MatplotlibWidget(QWidget):
         self.figure.xlabel(xlabel)
         self.figure.ylabel(ylabel)
         self.canvas.draw()
-#################################################
+#########################################################
 
 class SpeedometerWidget(QWidget):
     def __init__(self, parent=None):
@@ -286,7 +273,6 @@ class LiveSpeedGraph(FigureCanvas):
         self.axes.set_xlim(self.times[0], max(10, self.times[-1]))  # x축 범위를 동적으로 조정
         self.axes.legend()
         self.draw()
-
 
 class SpeedSubscriberWidget(QWidget):
     def __init__(self, type, parent=None):

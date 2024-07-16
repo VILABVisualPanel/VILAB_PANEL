@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VilabVisualizer</class>
+ <widget class="QMainWindow" name="VilabVisualizer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1266</width>
+    <height>869</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="mainWidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QFrame" name="controlFrame">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>1231</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="startButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>111</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string>Start (CTRL)</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="statusFrame">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>20</y>
+       <width>1061</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="camfrontLabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(237, 51, 59);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="camrearLabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(237, 51, 59);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="camleftLabel">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>20</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(237, 51, 59);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="camrightLabel">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(237, 51, 59);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lidarLabel">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>20</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(237, 51, 59);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ladar4dLabel">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>60</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(237, 51, 59);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="gpslocLabel">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>20</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(237, 51, 59);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="gpshdgLabel">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>60</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(237, 51, 59);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="recog1Label">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>20</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(237, 51, 59);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="recog2Label">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>60</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(237, 51, 59);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="localLabel">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>20</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(237, 51, 59);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="decisionLabel">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>60</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(237, 51, 59);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="canLabel">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>20</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(237, 51, 59);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ctrlLabel">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>60</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(237, 51, 59);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="graphFrame">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>200</y>
+      <width>711</width>
+      <height>631</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="layoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>321</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="velocityLayout">
+      <item>
+       <widget class="QLabel" name="velocityLabel">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size: 16px</string>
+        </property>
+        <property name="text">
+         <string>Velocity Graph</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>20</y>
+       <width>321</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="steerLayout">
+      <item>
+       <widget class="QLabel" name="steerLabel">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size: 16px</string>
+        </property>
+        <property name="text">
+         <string>Steering Graph</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>330</y>
+       <width>321</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="accelLayout">
+      <item>
+       <widget class="QLabel" name="accelLabel">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size: 16px</string>
+        </property>
+        <property name="text">
+         <string>Acceleration Graph</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget_5">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>330</y>
+       <width>321</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="vladLayout">
+      <item>
+       <widget class="QLabel" name="vladLabel">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size: 16px</string>
+        </property>
+        <property name="text">
+         <string>VLAD Graph</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="matplotFrame">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>200</y>
+      <width>501</width>
+      <height>631</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="layoutWidget_6">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>461</width>
+       <height>591</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="matplotLayout"/>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

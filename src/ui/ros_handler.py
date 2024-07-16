@@ -19,7 +19,7 @@ class ROSHandler(Node):
         self.target_value = {'velocity': 0, 'steer': 0, 'accel': 0, 'brake': 0}
         self.can_inform = {'eps_status': 'Off', 'acc_status': 'off'}
         self.system_status = {'mode': 0, 'signal': 0, 'lap_count': 0}
-        # self.user_input = UserInput()
+        self.user_input = UserInput()
         self.user_value = {'user_mode': 0, 'user_signal': 0}
         self.lane_number = 0
 

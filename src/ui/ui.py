@@ -77,7 +77,6 @@ class MyApp(QMainWindow, form_class):
         self.canTable.setItem(0, 1, QTableWidgetItem(can_inform['eps_status']))
         self.canTable.setItem(1, 1, QTableWidgetItem(can_inform['acc_status']))
 
-
     def click_mode(self, mode):
         self.RH.user_value['user_mode'] = mode
         self.check_timer()
