@@ -10,7 +10,6 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32, Int8
 from drive_msgs.msg import Actuator, VehicleState
-# from morai_msgs.msg import EgoSt
 
 class MainWindow(QWidget):
     def __init__(self):
