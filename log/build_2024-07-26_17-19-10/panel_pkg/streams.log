@@ -1,0 +1,39 @@
+[0.562s] Invoking command in '/home/hankyeolyu/vilab/VILAB_PANEL/src/panel_pkg': PYTHONPATH=/home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/panel_pkg build --build-base /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build install --record /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/install.log --single-version-externally-managed install_data
+[0.786s] running egg_info
+[0.787s] creating ../../build/panel_pkg/panel_pkg.egg-info
+[0.787s] writing ../../build/panel_pkg/panel_pkg.egg-info/PKG-INFO
+[0.787s] writing dependency_links to ../../build/panel_pkg/panel_pkg.egg-info/dependency_links.txt
+[0.787s] writing entry points to ../../build/panel_pkg/panel_pkg.egg-info/entry_points.txt
+[0.787s] writing requirements to ../../build/panel_pkg/panel_pkg.egg-info/requires.txt
+[0.787s] writing top-level names to ../../build/panel_pkg/panel_pkg.egg-info/top_level.txt
+[0.789s] writing manifest file '../../build/panel_pkg/panel_pkg.egg-info/SOURCES.txt'
+[0.790s] reading manifest file '../../build/panel_pkg/panel_pkg.egg-info/SOURCES.txt'
+[0.791s] writing manifest file '../../build/panel_pkg/panel_pkg.egg-info/SOURCES.txt'
+[0.791s] running build
+[0.791s] running build_py
+[0.791s] creating /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build
+[0.791s] creating /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib
+[0.791s] creating /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib/panel_pkg
+[0.792s] copying panel_pkg/__init__.py -> /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib/panel_pkg
+[0.792s] copying panel_pkg/main.py -> /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib/panel_pkg
+[0.792s] copying panel_pkg/widget.py -> /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib/panel_pkg
+[0.792s] running install
+[0.792s] running install_lib
+[0.792s] creating /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg
+[0.793s] copying /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib/panel_pkg/__init__.py -> /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg
+[0.793s] copying /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib/panel_pkg/main.py -> /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg
+[0.793s] copying /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib/panel_pkg/widget.py -> /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg
+[0.793s] byte-compiling /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg/__init__.py to __init__.cpython-310.pyc
+[0.793s] byte-compiling /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg/main.py to main.cpython-310.pyc
+[0.794s] byte-compiling /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg/widget.py to widget.cpython-310.pyc
+[0.794s] running install_data
+[0.794s] creating /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/share/ament_index
+[0.794s] creating /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/share/ament_index/resource_index
+[0.795s] creating /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/share/ament_index/resource_index/packages
+[0.795s] copying resource/panel_pkg -> /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/share/ament_index/resource_index/packages
+[0.795s] copying package.xml -> /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/share/panel_pkg
+[0.795s] running install_egg_info
+[0.796s] Copying ../../build/panel_pkg/panel_pkg.egg-info to /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg-0.0.0-py3.10.egg-info
+[0.797s] running install_scripts
+[0.815s] writing list of installed files to '/home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/install.log'
+[0.837s] Invoked command in '/home/hankyeolyu/vilab/VILAB_PANEL/src/panel_pkg' returned '0': PYTHONPATH=/home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/panel_pkg build --build-base /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build install --record /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/install.log --single-version-externally-managed install_data

@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'vilab_ui_pkg'
+package_name = 'panel_pkg'
 
 setup(
     name=package_name,
@@ -14,7 +14,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='hankyeolyu',
-    maintainer_email='lunia8753@naver.com',
+    maintainer_email='20181489@kookmin.ac.kr',
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],

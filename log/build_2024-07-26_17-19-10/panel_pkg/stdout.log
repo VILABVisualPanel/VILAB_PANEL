@@ -1,0 +1,37 @@
+running egg_info
+creating ../../build/panel_pkg/panel_pkg.egg-info
+writing ../../build/panel_pkg/panel_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/panel_pkg/panel_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/panel_pkg/panel_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/panel_pkg/panel_pkg.egg-info/requires.txt
+writing top-level names to ../../build/panel_pkg/panel_pkg.egg-info/top_level.txt
+writing manifest file '../../build/panel_pkg/panel_pkg.egg-info/SOURCES.txt'
+reading manifest file '../../build/panel_pkg/panel_pkg.egg-info/SOURCES.txt'
+writing manifest file '../../build/panel_pkg/panel_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build
+creating /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib
+creating /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib/panel_pkg
+copying panel_pkg/__init__.py -> /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib/panel_pkg
+copying panel_pkg/main.py -> /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib/panel_pkg
+copying panel_pkg/widget.py -> /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib/panel_pkg
+running install
+running install_lib
+creating /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg
+copying /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib/panel_pkg/__init__.py -> /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg
+copying /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib/panel_pkg/main.py -> /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg
+copying /home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/build/lib/panel_pkg/widget.py -> /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg
+byte-compiling /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg/main.py to main.cpython-310.pyc
+byte-compiling /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg/widget.py to widget.cpython-310.pyc
+running install_data
+creating /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/share/ament_index
+creating /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/share/ament_index/resource_index
+creating /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/share/ament_index/resource_index/packages
+copying resource/panel_pkg -> /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/share/ament_index/resource_index/packages
+copying package.xml -> /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/share/panel_pkg
+running install_egg_info
+Copying ../../build/panel_pkg/panel_pkg.egg-info to /home/hankyeolyu/vilab/VILAB_PANEL/install/panel_pkg/lib/python3.10/site-packages/panel_pkg-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/hankyeolyu/vilab/VILAB_PANEL/build/panel_pkg/install.log'
